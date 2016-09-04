@@ -1,4 +1,28 @@
 Rails.application.routes.draw do
+  get 'forum/parenting'
+
+  get 'forum/share'
+
+  get 'forum/help'
+
+  get 'chinese/words'
+
+  get 'chinese/story'
+
+  get 'chinese/songs'
+
+  get 'art/animals'
+
+  get 'art/plants'
+
+  get 'art/your_own_project'
+
+  get 'math/addition'
+
+  get 'math/subtraction'
+
+  get 'math/pattern'
+
   devise_for :users
   resources :homes
 

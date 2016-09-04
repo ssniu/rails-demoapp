@@ -30,8 +30,6 @@
              </ul>
               <% end %>
 
-
-
              <ul class="nav navbar-nav">
 
                <li role="presentation" class="active"><%= link_to "Home", homes_path %></li>
@@ -40,9 +38,9 @@
                       aria-haspopup="true" aria-expanded="false">Math<span class="caret"></span>
                      </a>
                        <ul class="dropdown-menu">
-                         <li><a href="#">Addition</li></a>
-                         <li><a href="#">Subtraction</li></a>
-                         <li><a href="#">Pattern</li></a>
+                         <li><%= link_to "Addition", math_addition_path %></li>
+                         <li><%= link_to "Subtraction", math_subtraction_path %></li>
+                         <li><%= link_to "Pattern", math_pattern_path %></li>
                        </ul>
                    </li>
                <li role="presentation" class="dropdown">
@@ -50,9 +48,9 @@
                       aria-haspopup="true" aria-expanded="false">Art<span class="caret"></span>
                   </a>
                   <ul class="dropdown-menu">
-                      <li><a href="#">Animals</li></a>
-                      <li><a href="#">Plants</li></a>
-                      <li><a href="#">Your own project</li></a>
+                      <li><%= link_to "Animals", art_animals_path %></li>
+                      <li><%= link_to "Plants", art_plants_path %></li>
+                      <li><%= link_to "Your own projects", art_your_own_project_path %></li>
                   </ul>
                 </li>
                 <li role="presentation" class="dropdown">
@@ -60,9 +58,9 @@
                        aria-haspopup="true" aria-expanded="false">Chinese<span class="caret"></span>
                    </a>
                    <ul class="dropdown-menu">
-                       <li><a href="#">Words</li></a>
-                       <li><a href="#">Story</li></a>
-                       <li><a href="#">Songs</li></a>
+                       <li><%= link_to "Words", chinese_songs_path %></li>
+                       <li><%= link_to "Stories", chinese_story_path %></li>
+                       <li><%= link_to "Songs", chinese_words_path %></li>
                    </ul>
                  </li>
                  <li role="presentation" class="dropdown">
@@ -70,9 +68,9 @@
                         aria-haspopup="true" aria-expanded="false">Forum<span class="caret"></span>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Parenting</li></a>
-                        <li><a href="#">Share</li></a>
-                        <li><a href="#">Help</li></a>
+                        <li><%= link_to "Parenting", forum_parenting_path %></li>
+                        <li><%= link_to "Share", forum_share_path %></li>
+                        <li><%= link_to "Help", forum_help_path %></li>
                     </ul>
                   </li>
              </ul>
@@ -92,8 +90,12 @@
   </div>
 
   <div class="container">
-    <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
+    <% if flash[:notice] %>
+      <div class="alert alert-success" role="alert">
+        <button class="close" data-dismiss="alert">x</button>
+        <%= flash[:notice] %>
+      </div>
+    <% end %>
     <%= yield %>
   </div>
 </body>
