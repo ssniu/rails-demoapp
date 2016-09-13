@@ -18,6 +18,8 @@
 Follow the links to install Bootstrap & Devise
 
 #### Steps
+Navigate to the directory, create new rails project
+
 ``` ruby
 rails new kids_fun
 
