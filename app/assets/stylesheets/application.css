@@ -14,3 +14,6 @@
  *= require_self
  *= require bootstrap
  */
+.alert {
+  margin-top: 10px;
+}

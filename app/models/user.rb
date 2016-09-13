@@ -17,5 +17,5 @@ class User < ActiveRecord::Base
                         with: /a-zA-Z0-9_-/,
                         message: 'Must be formate correctly.'
                      }
-            
+
 end
