@@ -28,6 +28,10 @@ Using scaffold to generate the main page, model, controllers and view
 rails generate scaffold <pageName> <name>:<type> 
 
 ```
+eg:
+``` ruby
+rails generate scaffold Product title:string description:text price:decimal
+```
 
 #### Port
 
