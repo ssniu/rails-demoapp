@@ -1,18 +1,5 @@
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 ##### Main page view
 ![alt text](https://cloud.githubusercontent.com/assets/14773835/18457619/57d67cb2-7928-11e6-9c21-0c22e8c1f414.png)
 ##### Drop-down menu
@@ -26,9 +13,21 @@
 * [Bootstrap](http://getbootstrap.com)
 * [Devise](https://github.com/plataformatec/devise)
 
-#### Installing
+#### Installation
 
 Follow the links to install Bootstrap & Devise
+
+#### Steps
+``` ruby
+rails new kids_fun
+
+```
+Using scaffold to generate the main page, model, controllers and view
+``` ruby
+
+rails generate scaffold <pageName> <name>:<type> 
+
+```
 
 #### Port
 
